@@ -1,0 +1,16 @@
+
+<h2>Login</h2>
+
+<form (ngSubmit)="login()">
+  <label>Usuario:</label><br>
+  <input [(ngModel)]="usuario" name="usuario" required>
+  <br><br>
+
+  <label>Clave:</label><br>
+  <input [(ngModel)]="clave" name="clave" type="password" required>
+  <br><br>
+
+  <button type="submit">Entrar</button>
+</form>
+
+<p style="color:red;" *ngIf="error">{{ error }}</p>
